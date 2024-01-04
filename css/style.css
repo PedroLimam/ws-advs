@@ -397,24 +397,24 @@ body {
   margin-bottom: 15px;
   letter-spacing: 3px;
 }
-.section-sobre-nos h3 {
+.section-sobre-nos h2 {
   font-weight: normal;
   color: #001C49;
   font-size: 56px;
   margin-bottom: 15px;
 }
 @media (max-width: 960px) {
-  .section-sobre-nos h3 {
+  .section-sobre-nos h2 {
     font-size: 40px;
   }
 }
 @media (max-width: 540px) {
-  .section-sobre-nos h3 {
+  .section-sobre-nos h2 {
     font-size: 30px;
   }
 }
 @media (max-width: 400px) {
-  .section-sobre-nos h3 {
+  .section-sobre-nos h2 {
     font-size: 23px;
   }
 }
