@@ -763,6 +763,11 @@ footer .footer-box-infos__box-contatos p {
     font-size: 14px;
   }
 }
+footer .footer-box-infos__box-contatos p:nth-child(3) {
+  border-bottom: 2px solid #BBE82D;
+  width: -moz-fit-content;
+  width: fit-content;
+}
 @media (max-width: 960px) {
   footer .footer-box-infos__box-contatos {
     margin-bottom: 53px;

@@ -555,6 +555,11 @@ footer{
             @include responsive(xs){
                 font-size: 14px;
             }
+
+            &:nth-child(3){
+                border-bottom: 2px solid $green-basic;
+                width: fit-content;
+            }
         }
 
         @include responsive(s){
