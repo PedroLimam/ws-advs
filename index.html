@@ -4,9 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-
     <!--=========== METATAGS ============-->
-
     <link rel = "canonical" href = "https://" /> 
     <meta name = "description" content = "descricao aqui">
     <meta name="title" content="Tonaco e Fioravanti." />
@@ -264,17 +262,16 @@
                     Para qualquer dúvida, consulta ou para dar início a uma parceria excepcional, 
                     entre em contato conosco.
                 </p>
-               <form action="" id="formEmail">
-                    <input type="text" name="name" id="name" placeholder="Seu nome" required>
-                    <input type="email" name="email" id="email" placeholder="Seu e-mail" required>
-                    <textarea name="" id="textarea" placeholder="Mensagem" required></textarea >
-                    <button class="btn-send-form" type="submit">Enviar</button>
-               </form>
 
+               <form target="_blank" action="https://formsubmit.co/contato@tonacoefioravanti.com.br" id="formEmail" method="POST">
+                <input type="text" name="name" id="name" placeholder="Seu nome" required>
+                <input type="email" name="email" id="email" placeholder="Seu e-mail" required>
+                <textarea name="textarea" id="textarea" placeholder="Mensagem" required></textarea >
+                <input type="hidden" name="_next" value="https://pedrolimam.github.io/ws-advs/./form/sucessForm.html">
+                <button class="btn-send-form" type="submit">Enviar</button>
+           </form>
             </div>
-
         </section>
-
     </main>
 
     <footer>

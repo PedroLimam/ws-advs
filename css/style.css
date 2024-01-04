@@ -845,4 +845,49 @@ footer .footer-box-infos__terms .box__terms a + a {
   footer {
     padding: 22px 22px 30px 22px;
   }
+}
+
+.container-sucess {
+  background-color: #001C49;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.container-sucess__main {
+  border-radius: 8px;
+  padding: 2rem 3rem;
+  border: 1px solid #BBE82D;
+  max-width: 90%;
+  text-align: center;
+}
+.container-sucess__main > h1 {
+  font-size: 30px;
+  color: #fff;
+  margin-bottom: 2rem;
+}
+.container-sucess__main > p {
+  color: #fff;
+  font-size: 24px;
+}
+.container-sucess__main .btn-return {
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: underline;
+  color: #BBE82D;
+  background-color: transparent;
+  margin-top: 1rem;
+  padding: 0.5rem;
+}
+@media (max-width: 540px) {
+  .container-sucess__main {
+    padding: 0.1rem;
+  }
+  .container-sucess__main h1 {
+    font-size: 26px;
+    margin-top: 1rem;
+  }
 }/*# sourceMappingURL=style.css.map */

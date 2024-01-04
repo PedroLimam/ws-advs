@@ -613,3 +613,53 @@ footer{
         padding: 22px 22px 30px 22px;
     }
 }
+
+//HTML FORM
+
+.container-sucess{
+    background-color: $blue-dark;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.container-sucess__main{
+    border-radius: 8px;
+    padding: 2rem 3rem;
+    border: 1px solid $green-basic;
+    max-width: 90%;
+    text-align: center;
+
+    > h1{
+        font-size: 30px;
+        color: #fff;
+        margin-bottom: 2rem;
+    }
+
+    > p{
+        color: #fff;
+        font-size: 24px;
+    }
+
+    .btn-return{
+        display: inline-block;
+        cursor: pointer;
+        text-decoration: underline;
+        color: $green-basic;
+        background-color: transparent;
+        margin-top: 1rem;
+        padding: 0.5rem;
+    }
+
+    @include responsive(xs){
+        padding: 0.1rem;
+
+        h1{
+            font-size: 26px;
+            margin-top: 1rem;
+        }
+    }
+}

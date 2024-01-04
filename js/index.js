@@ -4,6 +4,7 @@ const $itemsAccordions = document.querySelectorAll(".section-sobre-nos__card-adv
 
 $btnsAccordion.forEach(btn => {
     btn.addEventListener("click", (e) => {
+        e.preventDefault()
         const orderAccordion = e.target.getAttribute("accordion");
 
         $itemsAccordions[orderAccordion-1].classList.toggle("section-sobre-nos__card-adv__infos__list-historico--open");
@@ -22,15 +23,6 @@ $btnsAccordion.forEach(btn => {
         }
     })
 })
-
-const $formEmail = document.querySelector("#formEmail")
-$formEmail.addEventListener("submit", (e) => {
-    e.preventDefault();
-
-    const $name = document.querySelector("#name")
-    const $email = document.querySelector("#email")
-    const $textArea = document.querySelector("#textarea")    
-});
 
 const $inputMenu = document.querySelector("#bx-input")
 const $label = document.querySelector(".bx-label")
