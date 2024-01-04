@@ -296,12 +296,19 @@ body {
   padding-top: 20px;
   background-color: #fff;
 }
+@media (max-width: 1280px) {
+  .section-resume .section-resume__card-resume {
+    margin-left: 10px;
+    margin-top: 10px;
+  }
+}
 @media (max-width: 540px) {
   .section-resume .section-resume__card-resume {
     width: 94%;
     height: -moz-fit-content;
     height: fit-content;
     padding-bottom: 22px;
+    margin-left: 0px;
   }
 }
 .section-resume .section-resume__card-resume + .section-resume__card-resume {
@@ -309,8 +316,13 @@ body {
 }
 @media (max-width: 960px) {
   .section-resume .section-resume__card-resume + .section-resume__card-resume {
-    margin-left: 0;
+    margin-left: 10px;
     margin-top: 10px;
+  }
+}
+@media (max-width: 540px) {
+  .section-resume .section-resume__card-resume + .section-resume__card-resume {
+    margin-left: 0px;
   }
 }
 .section-resume .section-resume__card-resume img {
@@ -358,7 +370,7 @@ body {
 }
 .section-sobre-nos .section-sobre-nos__box .section-sobre-nos__box__cards-advs {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 27px;

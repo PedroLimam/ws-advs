@@ -71,18 +71,28 @@ body{
         padding-top: 20px;
         background-color: #fff;
 
+        @include responsive(l){
+            margin-left: 10px;
+            margin-top: 10px;
+        }
+
         @include responsive(xs){
             width: 94%;
             height: fit-content;
             padding-bottom: 22px;
+            margin-left: 0px;
         }
 
         & + .section-resume__card-resume{
             margin-left: 30px;
 
             @include responsive(s){
-                margin-left: 0;
+                margin-left: 10px;
                 margin-top: 10px;
+            }
+
+            @include responsive(xs){
+                margin-left: 0px;
             }
         }
 
@@ -135,7 +145,7 @@ body{
 
         .section-sobre-nos__box__cards-advs{
             display: flex;
-            align-items: center;
+            align-items: flex-start;
             justify-content: center;
             flex-wrap: wrap;
             margin-top: 27px;
