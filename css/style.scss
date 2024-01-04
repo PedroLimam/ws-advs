@@ -18,6 +18,11 @@ body{
     height: 100%;
     background-color: $gray-ligth;
     position: relative;
+    font-display: optional;
+
+    img{
+        overflow: visible;
+    }
 }
 
 .banner-home{

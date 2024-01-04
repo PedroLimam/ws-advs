@@ -245,6 +245,10 @@ body {
   height: 100%;
   background-color: #FAFAFA;
   position: relative;
+  font-display: optional;
+}
+body img {
+  overflow: visible;
 }
 
 .banner-home {
