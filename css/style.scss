@@ -1,0 +1,595 @@
+@import "./partials/responsive";
+@import "./partials/colors";
+@import './partials/menu';
+
+*, ::before, ::after{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+html{
+    scroll-behavior: smooth;
+}
+
+body{
+    width: 100%;
+    height: 100%;
+    background-color: $gray-ligth;
+    position: relative;
+}
+
+.banner-home{
+    width: 100%;
+    margin-bottom: -5px;
+
+    img{
+        width: 100%;
+        height: auto;
+        background-repeat: no-repeat;
+
+        &:nth-of-type(1){
+            @include responsive(xs){
+                display: none;
+            }
+        }
+
+        &:nth-of-type(2){
+            display: none;
+
+            @include responsive(xs){
+                display: block;
+            }
+        }
+    }
+}
+
+.section-resume{
+    padding: 81px 0 0 0;
+    background-color: $gray-ligth;
+    padding-bottom: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include responsive(xs){
+        padding-top: 35px;
+    }
+
+    .section-resume__box-cards{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-wrap: wrap;
+        max-width: 1466px;
+    }
+
+    .section-resume__card-resume{
+        height: 337px ;
+        width: 370px;
+        padding-top: 20px;
+        background-color: #fff;
+
+        @include responsive(xs){
+            width: 94%;
+            height: fit-content;
+            padding-bottom: 22px;
+        }
+
+        & + .section-resume__card-resume{
+            margin-left: 30px;
+
+            @include responsive(s){
+                margin-left: 0;
+                margin-top: 10px;
+            }
+        }
+
+        img{
+            margin-left: 29px;
+        }
+
+        .section-resume__card-resume__infos{
+            padding: 0 48px 0 48px;
+            display: flex;
+            flex-direction: column;
+
+            @include responsive(xs){
+                padding: 0 20px 0 20px;
+            }
+
+            span{
+                color: $blue-dark;
+                font-size: 24px;
+                margin-left: auto;
+                margin-bottom: 37px;
+
+                @include responsive(xs){
+                    margin-bottom: 17px;
+                }
+            }
+
+            p{
+                font-size: 16px;
+                color: $gray-font;
+            }
+        }
+        
+    }    
+}
+
+.section-sobre-nos{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 30px 0 172px 0;
+
+    .section-sobre-nos__box{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        max-width: 1466px;
+
+        .section-sobre-nos__box__cards-advs{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 27px;
+            width: 100%; 
+        }
+    }
+
+    h1{
+        color: $green-basic;
+        font-weight: normal;
+        font-size: 18px;
+        margin-bottom: 15px;
+        letter-spacing: 3px;
+    }
+
+    h3{
+        font-weight: normal;
+        color: $blue-dark;
+        font-size: 56px;
+        margin-bottom: 15px;
+
+        @include responsive(s){
+            font-size: 40px;
+        }
+
+        @include responsive(xs){
+            font-size: 30px;
+        }
+
+        @include responsive(xss){
+            font-size: 23px;
+        }
+    }
+
+    p{
+        font-size: 18px;
+        color: $gray-font;
+        text-align: center;
+        margin-bottom: 24px;
+        width: 80%;
+
+        @include responsive(s){
+            font-size: 16px;
+            width: 90%;
+        }
+    }
+    
+    .section-sobre-nos__card-adv{
+        width: 573px;
+        margin-top: 27px;
+
+        & +  .section-sobre-nos__card-adv{
+            margin-left: 80px;
+
+            @include responsive(s){
+                margin-left: 0;
+            }
+
+        }
+
+        @include responsive(xs){
+            width: 70%;
+            // display: flex;
+            // align-items: flex-end;
+            // justify-content: center;
+        }
+
+        img{
+            width: 470px;
+            height: fit-content;
+
+            @include responsive(xs){
+                width: 90%;
+            }
+        }
+
+        .section-sobre-nos__card-adv__infos{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            width: 470px;
+            padding-top: 27px;
+            padding: 27px 31px 20px 31px;
+            box-shadow: 0px 24px 64px #290F0019;
+            background-color: $blue-dark;
+            margin-left: auto;
+            transform: translateY(-5.8rem);
+
+            @include responsive(xs){
+                width: 94%;
+            }
+
+            .cod-oab{
+                color: $green-basic;
+                font-size: 18px;
+
+                @include responsive(xs){
+                    font-size: 16px;
+                }
+            }
+
+            .section-sobre-nos__card-adv__infos__titulo-adv{
+                margin-bottom: 10px;
+                font-size: 18px;
+                font-weight: normal;
+                color: #fff;
+                text-align: left;
+
+                @include responsive(xs){
+                    font-size: 16px;
+                }
+            }
+
+            .section-sobre-nos__card-adv__infos__list-historico{
+                color: #fff;
+                padding-left: 0;
+                margin-top: 0;
+                height: 0;
+                overflow: hidden;
+                opacity: 0;
+                transition: 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+
+                @include responsive(xs){
+                    font-size: 13px;
+                }
+            }
+
+            .section-sobre-nos__card-adv__infos__list-historico--open{
+                height: fit-content;
+                color: #fff;
+                padding-left: 21px;
+                margin-top: 37px;
+                opacity: 1;
+            }
+
+            .box-btn-accordion{
+                width: 100%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+
+                .btn-accordion{
+                    color: $green-basic;
+                    cursor: pointer;
+                    padding: 4px;
+                    background-color: transparent;
+                    border: none;    
+                    text-align: center;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    position: relative;
+                    z-index: 10;
+
+                    & > span{
+                        transform: rotateZ(90deg) translate(2px, -3px);
+                        margin-left: 8px;
+                        font-size: 26px;
+                    }
+
+                    .span-open{
+                        transform: rotateZ(-90deg) translate(-1px, -3px);
+                    }
+                }
+            }
+        }
+
+        .section-sobre-nos__card-adv__box-name-redes, .section-sobre-nos__card-adv__box-redes{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .section-sobre-nos__card-adv__box-name-redes{
+            justify-content: space-between;
+
+            p{
+                text-align: start;
+                font-size: 24px;
+                letter-spacing: 4px;
+                color: #FFFFFF;
+                margin: 0;
+
+                @include responsive(xs){
+                    font-size: 16px;
+                }
+            }
+        }
+
+        .section-sobre-nos__card-adv__box-redes{
+            a{
+                transition: 400ms ease;
+
+                &:hover{
+                    transform: translateY(-3px);
+                }
+            }
+
+            img{
+                height: fit-content;
+
+                &:nth-of-type(1){
+                    width: 22px;
+                    margin-right: 18.5px;
+                }
+                &:nth-of-type(2){
+                    width: 29px;
+                }
+            }
+        }
+
+        @include responsive(xs){
+            width: 90%;
+        }
+    }
+}
+
+.section__form{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: $blue-dark;
+    width: 100%;
+    padding: 3rem;
+
+    .box-form{
+        width: 653px;
+        box-shadow: 0px 24px 64px #02290019;    
+        background-color: #fff;
+        padding: 0 98px 80px 98px;
+        transform: translateY(-218px);
+
+        .box-form__title{
+            display: inline-block;
+            color: $blue-dark;
+            font-weight: normal;
+            font-size: 40px;
+            margin: 69px 0 22px 0;
+
+            @include responsive(s){
+                margin: 23px 0 12px 0;
+            }
+
+            @include responsive(xs){
+                font-size: 30px;
+            }
+        }
+
+        .box-form__descricao{
+            color: $gray-font;
+            font-size: 16px;
+            margin-bottom: 30px;
+
+            @include responsive(xs){
+                font-size: 14px;
+            }
+        }
+
+        form{
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            justify-content: center;
+            
+            input{
+                width: 100%;
+                display: inline-block;
+                border: 1px solid #DADADA;
+                border-radius: 6px;
+                padding: 10px 16px 10px 22px;
+                transition: 400ms ease;
+
+                & + input{
+                    margin-top: 16px;
+                }
+
+                &:focus-within{
+                    padding-left: 28px;
+                }
+
+                @include responsive(xs){
+                    padding: 8px 13px 8px 18px;
+
+                    &:focus-within{
+                        padding-left: 21px;
+                    }
+                }
+            }
+
+            textarea{
+                margin-top: 16px;
+                border: 1px solid #DADADA;
+                border-radius: 6px;
+                min-height: 96px;
+                width: 100%;
+                padding: 14px 24px 14px 24px;
+                resize: none;
+                transition: 400ms ease;
+
+                &::placeholder{
+                    color: $gray-font;
+                    font-family: "Open Sans", sans-serif;
+                }
+
+                &:focus-within{
+                    padding-left: 32px;
+                }
+            }
+
+            .btn-send-form{
+                cursor: pointer;
+                border: none;
+                color: #fff;
+                font-size: 14px;
+                width: 170px;
+                height: 48px;
+                background: #333333 0% 0% no-repeat padding-box;
+                border-radius: 6px;
+                margin-top: 16px;
+            }
+        }
+
+        @include responsive(s){
+            width: 90%;
+            padding: 0 20px 80px 20px;
+        }
+
+        @include responsive(xs){
+            width: 95%;
+            padding: 0 20px 52.5px 20px;
+        }
+
+        @include responsive(xs){
+            transform: translateY(-162px);
+        }
+    }
+
+    @include responsive(xs){
+        margin-bottom: -5rem;
+        padding: 0;
+    }
+}
+
+footer{
+    width: 100%;
+    background-color: $gray-dark;
+    padding: 96px 96px 59px 96px;
+
+    .footer-box-infos{
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        flex-wrap: wrap;
+    }
+
+    .footer-box-infos__box-redes{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        margin-right: 149px;
+
+        & > img {
+            width: 238px;
+            height: auto;
+            margin-bottom: 13px;
+        }
+
+        .footer-box-infos__box-redes__icons{
+            display: flex;
+        }
+
+        .footer-box-infos__icon-rede{
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 48px;
+            height: 48px;
+            border-radius: 50%;
+            background: #BBE82D 0% 0% no-repeat padding-box;
+            margin-right: 13px;
+        }
+
+        @include responsive(s){
+            margin-bottom: 53px;
+        }
+    }
+
+    .footer-box-infos__box-contatos{
+        display: flex;
+        flex-direction: column;
+
+        & > span{
+            color: $green-basic;
+            font-size: 18px;
+            margin-bottom: 10px;
+        }
+        
+        p{
+            color: #fff;
+            margin-bottom: 10px;
+
+            @include responsive(xs){
+                font-size: 14px;
+            }
+        }
+
+        @include responsive(s){
+            margin-bottom: 53px;
+        }
+    }
+
+    .footer-box-infos__terms{
+        margin-top: 5rem;
+        padding-top: 3rem;
+        border-top: 1px solid $gray-font;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        color: $gray-font;
+
+        .box__terms{
+            display: flex;
+            flex-wrap: wrap;
+            
+            @include responsive(xs){
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            a{
+                text-decoration: none;
+                display: inline-block;
+
+                & + a{
+                    margin-left: 32px;
+
+                    @include responsive(xs){
+                        margin-left: 0px;
+                        margin-top: 5px;
+                    }
+                }
+            }
+        }
+
+        @include responsive(s){
+            margin-top: 0rem;
+            padding-top: 1rem;
+        }
+    }
+
+    @include responsive(xs){
+        padding: 22px 22px 30px 22px;
+    }
+}
