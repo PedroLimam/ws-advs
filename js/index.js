@@ -41,13 +41,13 @@ $label.addEventListener("click", () => {
   if (!$inputMenu.checked) {
       $bodyTag.style.overflow = "hidden"
   } else {
-      $bodyTag.style.overflow = "auto"
+      $bodyTag.style.overflow = "visible"
   }
 })
 
 $menus.forEach(menuItem => {
     menuItem.addEventListener("click", () => {
-        $bodyTag.style.overflow = "auto"
+        $bodyTag.style.overflow = "visible"
         $inputMenu.checked = false
     })
 })

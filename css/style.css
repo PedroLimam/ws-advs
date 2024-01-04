@@ -375,6 +375,7 @@ body {
   flex-wrap: wrap;
   margin-top: 27px;
   width: 100%;
+  position: relative;
 }
 .section-sobre-nos h1 {
   color: #BBE82D;
