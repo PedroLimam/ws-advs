@@ -95,7 +95,8 @@ header {
   letter-spacing: 2px;
   position: relative;
   color: #001C49;
-  transition: 0.7s ease;
+  transition: 1 ease;
+  position: relative;
 }
 @media (max-width: 1280px) {
   .nav__link {
@@ -109,8 +110,22 @@ header {
     font-size: 22px;
   }
 }
-.nav__link:hover {
-  opacity: 0.6;
+.nav__link::after {
+  content: "";
+  position: absolute;
+  bottom: 5%;
+  right: 0;
+  height: 2px;
+  width: 100%;
+  background-color: #BBE82D;
+  transform: translateY(5px);
+  opacity: 0;
+  transition: 400ms ease;
+  border-radius: 8px;
+}
+.nav__link:hover::after {
+  transform: translateY(0);
+  opacity: 0.9;
 }
 
 .nav-social {
