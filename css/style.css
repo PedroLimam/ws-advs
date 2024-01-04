@@ -247,9 +247,6 @@ body {
   position: relative;
   font-display: optional;
 }
-body img {
-  overflow: visible;
-}
 
 .banner-home {
   width: 100%;
