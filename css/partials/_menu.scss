@@ -97,6 +97,16 @@ header{
     color: $blue-dark;
     transition: .7s ease;
 
+    @include responsive(l){
+        margin-left: 28px;
+    }
+
+    @include responsive(m){
+        margin-left: 20px;
+        padding: 8px 7px;
+        font-size: 22px;
+    }
+
     &:hover{
         opacity: 0.6;
     }
