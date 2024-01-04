@@ -29,9 +29,26 @@ $formEmail.addEventListener("submit", (e) => {
 
     const $name = document.querySelector("#name")
     const $email = document.querySelector("#email")
-    const $textArea = document.querySelector("#textarea")
+    const $textArea = document.querySelector("#textarea")    
+});
 
-    console.log($name.value, $email.value, $textArea.value)
-    
-  });
+const $inputMenu = document.querySelector("#bx-input")
+const $label = document.querySelector(".bx-label")
+const $bodyTag = document.querySelector("body")
+const $menus = document.querySelectorAll(".nav__link")
+
+$label.addEventListener("click", () => {
+  if (!$inputMenu.checked) {
+      $bodyTag.style.overflow = "hidden"
+  } else {
+      $bodyTag.style.overflow = "auto"
+  }
+})
+
+$menus.forEach(menuItem => {
+    menuItem.addEventListener("click", () => {
+        $bodyTag.style.overflow = "auto"
+        $inputMenu.checked = false
+    })
+})
 
