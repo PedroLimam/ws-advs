@@ -209,6 +209,8 @@ body{
 
             @include responsive(xs){
                 width: 90%;
+                min-height: 322px;
+                height: auto;
             }
         }
 
@@ -336,6 +338,7 @@ body{
             }
 
             img{
+                all: unset;
                 height: fit-content;
 
                 &:nth-of-type(1){
