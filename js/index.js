@@ -38,7 +38,7 @@ $label.addEventListener("click", () => {
 })
 
 $menus.forEach(menuItem => {
-    menuItem.addEventListener("click", (e) => {
+    menuItem.addEventListener("click", () => {
         $bodyTag.style.overflow = "visible"
         $inputMenu.checked = false
     })
