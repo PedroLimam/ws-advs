@@ -53,6 +53,7 @@ const $name = document.querySelector("#name")
 const $message = document.querySelector("#textarea")
 
 $formSubmit.addEventListener("submit", () => {
+    console.log("aqui")
     $name.value = ""
     $emailInput.value = ""
     $message.value = ""
