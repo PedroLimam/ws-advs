@@ -262,4 +262,15 @@ header{
     @include responsive(xss){
         width: 60vw;
     }
+
+    .list-items{
+        display: flex;
+        flex-direction: column;
+
+        .btn-send-email{
+            width: 138px;
+            transform: translate(-17%, 22vh);
+            color: #fff;
+        }
+    }
 }

@@ -255,6 +255,15 @@ header {
     width: 60vw;
   }
 }
+.menu-hamburguer .list-items {
+  display: flex;
+  flex-direction: column;
+}
+.menu-hamburguer .list-items .btn-send-email {
+  width: 138px;
+  transform: translate(-17%, 22vh);
+  color: #fff;
+}
 
 *, ::before, ::after {
   margin: 0;
