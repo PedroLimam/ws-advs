@@ -29,8 +29,7 @@ const $label = document.querySelector(".bx-label")
 const $bodyTag = document.querySelector("body")
 const $menus = document.querySelectorAll(".nav__link")
 
-$label.addEventListener("click", (e) => {
-    e.preventDefault()
+$label.addEventListener("click", () => {
   if (!$inputMenu.checked) {
       $bodyTag.style.overflow = "hidden"
   } else {
@@ -40,8 +39,6 @@ $label.addEventListener("click", (e) => {
 
 $menus.forEach(menuItem => {
     menuItem.addEventListener("click", (e) => {
-        e.preventDefault()
-
         $bodyTag.style.overflow = "visible"
         $inputMenu.checked = false
     })
