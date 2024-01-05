@@ -29,7 +29,8 @@ const $label = document.querySelector(".bx-label")
 const $bodyTag = document.querySelector("body")
 const $menus = document.querySelectorAll(".nav__link")
 
-$label.addEventListener("click", () => {
+$label.addEventListener("click", (e) => {
+    e.preventDefault()
   if (!$inputMenu.checked) {
       $bodyTag.style.overflow = "hidden"
   } else {
@@ -38,9 +39,21 @@ $label.addEventListener("click", () => {
 })
 
 $menus.forEach(menuItem => {
-    menuItem.addEventListener("click", () => {
+    menuItem.addEventListener("click", (e) => {
+        e.preventDefault()
+
         $bodyTag.style.overflow = "visible"
         $inputMenu.checked = false
     })
 })
 
+const $formSubmit = document.querySelector("#formEmail")
+const $emailInput = document.querySelector("#email")
+const $name = document.querySelector("#name")
+const $message = document.querySelector("#textarea")
+
+$formSubmit.addEventListener("submit", () => {
+    $name.value = ""
+    $emailInput.value = ""
+    $message.value = ""
+})
